@@ -40,6 +40,9 @@
     scroll-behavior: smooth;
     font-family: "F Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
   }
+  body{
+    margin: 0px;
+  }
   a{
     @apply text-cyber-yellow transition-color
   }
