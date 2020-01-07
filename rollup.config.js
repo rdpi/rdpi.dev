@@ -1,9 +1,11 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import replace from '@rollup/plugin-replace';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
+require ('dotenv').config();
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -16,6 +18,9 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+    replace({
+      'RDPI_API': `'${process.env.RDPI_API}'`,
+    }),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
@@ -24,9 +29,8 @@ export default {
 			css: css => {
 				css.write('public/build/bundle.css');
       },
-      preprocess: sveltePreprocess({ postcss: true }), 
-		}),
-
+      preprocess: sveltePreprocess({ postcss: true }),
+    }),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration —
