@@ -73,7 +73,7 @@
   
 </script>
 
-<div class="p-5 fixed top-0 flex flex-col bg-cyber-purple h-screen w-full md:w-1/2 lg:w-1/3 shadow-lg" style="right: {right}; transition: .75s;">
+<div class="p-5 fixed top-0 flex flex-col bg-cyber-purple min-h-screen w-full md:w-1/2 lg:w-1/3 shadow-lg" style="right: {right}; transition: .75s;">
   <div>
     <button class="object-left-top text-cyber-yellow hover:text-cyber-pink text-2xl" on:click={close}><div class="inline-block rightArrow"><Icon icon={faChevronRight}/></div><div class="leftArrow inline-block"><Icon icon={faChevronLeft}/></div></button>
   </div>

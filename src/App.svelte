@@ -15,7 +15,7 @@
   $: console.log(w);
 </script>
 
-<main bind:clientWidth={w} class="h-screen bg-gray-400">
+<main bind:clientWidth={w} class="min-h-screen bg-gray-400">
   <NavBar bind:open={showLinks} />
   <Home />
   <About />
