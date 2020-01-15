@@ -4,6 +4,8 @@
   import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
   import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
   export let open = false;
+  export let captchaId;
+  export let widgetId;
   let subject = '';
   let email = '';
   let message = '';
@@ -22,14 +24,14 @@
     captcha = '';
     error = '';
     sendText = 'Send';
-    grecaptcha.reset(); 
+    grecaptcha.reset(widgetId); 
   }
 
   const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   const handleSubmit = () => {
     error = '';
-    captcha = grecaptcha.getResponse();
+    captcha = grecaptcha.getResponse(widgetId);
     if(message.length < 1){
       error = 'A message is required';
       return false;
@@ -65,10 +67,10 @@
       console.log('Error Posting');
       console.log(err);
       console.log(err.data);
-      grecaptcha.reset(); 
+      grecaptcha.reset(widgetId); 
     })
   }
-
+  
 </script>
 
 <div class="p-5 fixed top-0 flex flex-col bg-cyber-purple h-screen w-full md:w-1/2 lg:w-1/3 shadow-lg" style="right: {right}; transition: .75s;">
@@ -80,7 +82,7 @@
   <input bind:value={email} class="w-full bg-cyber-purple text-cyber-yellow p-2 mt-4 border-solid border-2 border-cyber-yellow rounded placeholder-white" placeholder="Your Email Address (Optional)"/>
   <textarea bind:value={message} class="w-full bg-cyber-purple text-cyber-yellow h-64 p-2 mt-4 mb-8 border-solid border-2 border-cyber-yellow rounded placeholder-white" placeholder="Message"/>
   <div class="mb-8 flex justify-center w-full">
-    <div class="g-recaptcha" data-sitekey="6LcNocwUAAAAAGCfLRvrW6Lt5dtsn50tvROu2aIj"></div>
+    <div id={captchaId}></div>
   </div>
   <button on:click={handleSubmit} class="w-full text-cyber-yellow border-cyber-yellow border-solid border-2 rounded p-2 transition-colors hover:bg-cyber-pink">{sendText}</button>
   {#if error}

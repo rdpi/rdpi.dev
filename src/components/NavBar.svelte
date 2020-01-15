@@ -1,10 +1,13 @@
 <script>
+  import { onMount } from 'svelte'
   import NavLink from './NavLink.svelte';
   import ContactForm from './ContactForm.svelte';
   import MobileMenu from './MobileMenu.svelte';
   import HamburgerIcon from './HamburgerIcon.svelte';
   export let open = false;
   let mobileOpen = false;
+  let deskopWidgetId;
+  let mobileWidgetId
 
   let handleClick = () => {
     open = !open;
@@ -23,6 +26,19 @@
   }
   prevScrollpos = currentScrollPos;
 }
+  
+  onMount(() => {
+    window.onloadCallback = () => {
+      deskopWidgetId = grecaptcha.render('desktop', {
+        'sitekey' : '6LcNocwUAAAAAGCfLRvrW6Lt5dtsn50tvROu2aIj',
+        'theme' : 'light'
+      });
+      mobileWidgetId = grecaptcha.render('mobile', {
+        'sitekey' : '6LcNocwUAAAAAGCfLRvrW6Lt5dtsn50tvROu2aIj',
+        'theme' : 'light'
+      });
+    }
+  });
 </script>
 
 <div class="fixed p-5 hidden md:flex flex-row justify-between text-white bg-cyber-lilac w-full md:items-center">
@@ -33,7 +49,7 @@
     <NavLink href="#experience" number="03" title="Experience" />
     <NavLink href="#projects" number="04" title="Projects" />
     <button on:click={handleClick} class="text-cyber-yellow border-cyber-yellow border-solid border-2 rounded p-2 transition-colors hover:bg-cyber-pink">Get In Touch</button>
-    <ContactForm bind:open/>
+    <ContactForm bind:open captchaId='desktop' widgetId={deskopWidgetId}/>
   </div>
 </div>
 
@@ -48,7 +64,7 @@
       <NavLink on:click={handleClickMobile} href="#experience" number="03" title="Experience" />
       <NavLink on:click={handleClickMobile} href="#projects" number="04" title="Projects" />
       <button on:click={handleClick} class="text-cyber-yellow border-cyber-yellow border-solid border-2 rounded p-2 mt-4 md:mt-0 transition-colors hover:bg-cyber-pink">Get In Touch</button>
-      <ContactForm bind:open/>
+      <ContactForm bind:open captchaId='mobile' widgetId={mobileWidgetId}/>
   </div>
     </MobileMenu>
   </div>
