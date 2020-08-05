@@ -13,7 +13,9 @@
     in Nova Scotia, Canada, and am currently working as a software developer for 
     <a href="https://www.devradius.com" target="blank">
       DevRadius
-    </a> 
-    in British Columbia, Canada.
+    </a> and 
+    <a href="https://www.thrinacia.com" target="blank">
+    Thrinacia
+    </a>
   </p>
 </Section>

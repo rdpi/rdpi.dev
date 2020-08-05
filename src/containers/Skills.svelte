@@ -1,9 +1,9 @@
 <script>
   import Section from '../components/Section.svelte';
 
-  let languages = ['JavaScript', 'PHP', 'Java', 'C', 'HTML', 'CSS', 'Less', 'Sass', 'Python', 'Shell Scripting', 'SQL'];
-  let frameworks = ['React', 'React Native', 'Angular', 'Svelte', 'Laravel', 'Express', 'Node.js', 'Wordpress', 'Drupal',];
-  let technologies =['MariaDB', 'MySQL', 'MongoDB', 'Linux', 'BSD', 'Windows', 'Apache', 'NGINX', 'Git', 'Travis CI', 'Jenkins'];
+  let languages = ['JavaScript', 'PHP', 'Java', 'C', 'Rust', 'HTML', 'CSS', 'Less', 'Sass', 'Python', 'Shell Scripting', 'SQL'];
+  let frameworks = ['React', 'React Native', 'Angular', 'AngularJS', 'Svelte', 'Laravel', 'Express', 'Node.js', 'Wordpress', 'Drupal',];
+  let technologies =['Node.JS', 'Express', 'Docker', 'MariaDB', 'MySQL', 'MongoDB', 'Linux', 'BSD', 'Windows', 'Apache', 'NGINX', 'Git', 'Jenkins'];
 
   let filter = '';
 
