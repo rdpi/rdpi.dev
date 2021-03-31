@@ -4,21 +4,21 @@
 
 <Section id="experience" number="03" title="Experience">
   <p>January 2019 - Present: Software Developer @ <a href="https://www.thrinacia.com" target="_blank">Thrinacia</a></p>
-	<p class="my-4">Maintained AngularJS application for crowdfunding platform, widget made in Angular 4, 
-	developed custom features and applications for clients, and maintained android app.</p>
+	<p class="my-4">Maintained and developed new features for AngularJS application and backend for crowdfunding platform, lead development on new web component library,
+		developed custom features and applications for clients, and maintained native Android app.</p>
 	
   <ul class="list-disc list-inside">
 		<li>Developed, maintained and extended core web frontend written in AngularJS</li>
+		<li>Developed and maintained backend API code (Perl Catalyst)</li>
 		<li>Worked closely with backend developers to implement new features into the platform</li>
-		<li>Developed and maintained embeddable widget written in Angular 4</li>
+		<li>Lead development of new LitElement web component library for platform</li>
 		<li>Worked closely with clients to design and develop custom crowd funding applications based on our core application</li>
-		<li>Developed microservices to extend backend functionality of the platform</li>
 		<li>Maintained mobile android app</li>
   <ul>
   <br>
   <hr>
   <br>
-  <p>January 2019 - Present: Software Developer @ <a href="https://www.devradius.com" target="_blank">DevRadius</a></p>
+  <p>January 2019 - Janurary 2020: Software Developer @ <a href="https://www.devradius.com" target="_blank">DevRadius</a></p>
 	<p class="my-4">Designed, developed and mantained various websites, webapps, mobile apps and APIs using an array of different technologies,
 	and languages, both on the frontend and backend</p>
 
