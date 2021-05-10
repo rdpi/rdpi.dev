@@ -8,7 +8,7 @@
     <a href="https://dal.ca" target="_blank">
       Dalhousie University
     </a> 
-    and am currently in British Columbia, Canada working as a software engineer for 
+    and am working as a software engineer for 
     <a href="https://www.thrinacia.com" target="blank">
     Thrinacia
     </a>

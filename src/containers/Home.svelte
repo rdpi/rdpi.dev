@@ -7,7 +7,7 @@
   <br/>
   <span class="text-cyber-yellow font-bold text-6xl">Ryan Pitts,</span>
   <br/>
-  a software developer in Nova Scotia, Canada. I work on the web.
+  a software developer in Vancouver, BC
   </p>
 </Section>
 
