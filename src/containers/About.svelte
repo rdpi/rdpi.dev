@@ -4,13 +4,11 @@
 
 <Section id="about" number="01" title="About">
   <p>
-    Hey, I'm Ryan, nice to meet you!. I am a software developer who develops 
-    for the web using various languages, frameworks and technologies, both on 
-    the frontend and the backend. I hold a BCS from 
+    Hey, I'm Ryan, nice to meet you!. I am a software engineer creating software across the stack, from backend to web to mobile. I hold a BCS from 
     <a href="https://dal.ca" target="_blank">
       Dalhousie University
     </a> 
-    in Nova Scotia, Canada, and am currently working as a software developer for 
+    and am currently in British Columbia, Canada working as a software engineer for 
     <a href="https://www.thrinacia.com" target="blank">
     Thrinacia
     </a>
