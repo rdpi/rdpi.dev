@@ -7,7 +7,7 @@
   <br/>
   <span class="text-cyber-yellow font-bold text-6xl">Ryan Pitts,</span>
   <br/>
-  a software developer in Vancouver, BC
+  a software engineer in Vancouver, BC
   </p>
 </Section>
 
